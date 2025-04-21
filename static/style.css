@@ -37,14 +37,18 @@ h1 {
 
 .user-message {
     background-color: #dcf8c6;
-    align-self: flex-end; /* Align user messages to the right */
-    margin-left: auto;
+    margin-right: auto; /* Keep max-width effective on the left */
+    align-self: flex-start;
 }
+
 
 .bot-message {
     background-color: #e5e5ea;
     align-self: flex-start; /* Align bot messages to the left */
-    margin-right: auto;
+    margin-right: auto; /* Prevent stretching full width */
+    /* --- ADD THIS LINE --- */
+    white-space: pre-wrap; /* Preserve whitespace and newlines, wrap text */
+    /* --- END ADDED LINE --- */
 }
 
 #inputArea {
